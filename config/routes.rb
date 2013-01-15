@@ -1,4 +1,12 @@
 Gastroverse::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/help"
+
+  get "landing_page/home"
+
+  get "landing_page/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
