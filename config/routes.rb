@@ -1,4 +1,11 @@
 Gastroverse::Application.routes.draw do
+  get "users/new"
+
+  root to: 'landing_page#home'
+  match '/signup',  to: 'users#new'
+  match '/about',   to: 'landing_page#about'
+  match '/contact', to: 'landing_page#contact'
+  
   get "static_pages/home"
 
   get "static_pages/help"
@@ -6,6 +13,8 @@ Gastroverse::Application.routes.draw do
   get "landing_page/home"
 
   get "landing_page/about"
+  
+  get "landing_page/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
