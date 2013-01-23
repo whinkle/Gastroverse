@@ -1,7 +1,13 @@
 Gastroverse::Application.routes.draw do
-  get "users/new"
+  get "home/new"
+
+  get "login/new"
+
+  resources :users
 
   root to: 'landing_page#home'
+
+  match '/signup',  to: 'users#new'
   match '/signup',  to: 'users#new'
   match '/about',   to: 'landing_page#about'
   match '/contact', to: 'landing_page#contact'

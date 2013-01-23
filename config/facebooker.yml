@@ -1,0 +1,7 @@
+development:
+  app_id: 145103575645281
+  secret: 21c2ce3b2faafc6e93b90458a24f49e5
+  api_key: 145103575645281
+  callback_domain: https://localhost:3000/
+  pretty_errors: false
+  set_asset_host_to_callback_url: true
