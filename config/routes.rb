@@ -1,4 +1,27 @@
 Gastroverse::Application.routes.draw do
+  get "unknown_gastroverse/bell_pepper"
+  get "unknown_gastroverse/tomato"
+  get "unknown_gastroverse/sweet_potato"  
+  get "unknown_gastroverse/home"
+  
+  match '/unknown_gastroverse/home', to: 'unknown_gastroverse#home'  
+  match '/unknown_gastroverse/sweetpotato', to: 'unknown_gastroverse#sweet_potato'  
+  match '/unknown_gastroverse/tomato', to: 'unknown_gastroverse#tomato'  
+  match '/unknown_gastroverse/bellpepper', to: 'unknown_gastroverse#bell_pepper'
+
+
+  get "known_gastroverse/mother_sauces"
+  get "known_gastroverse/roasted_chicken"
+  get "known_gastroverse/soup"  
+  get "known_gastroverse/home"
+  
+  match '/known_gastroverse/home', to: 'known_gastroverse#home'
+  match '/known_gastroverse/soup', to: 'known_gastroverse#soup'  
+  match '/known_gastroverse/roasted_chicken', to: 'known_gastroverse#roasted_chicken'
+  match '/known_gastroverse/mother_sauces', to: 'known_gastroverse#mother_sauces'
+
+  
+  
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
