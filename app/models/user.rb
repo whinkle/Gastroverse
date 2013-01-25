@@ -1,8 +1,12 @@
 class User < ActiveRecord::Base
+<<<<<<< HEAD
       has_many :points  
       has_many :badges , :through => :levels 
       has_many :levels  
   attr_accessible :name, :email, :password, :password_confirmation
+=======
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+>>>>>>> framework-outline
   has_secure_password
 
   before_save { |user| user.email = email.downcase }
